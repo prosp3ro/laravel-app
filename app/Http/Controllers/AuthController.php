@@ -10,6 +10,11 @@ class AuthController extends Controller
 {
     public function register()
     {
-        Mail::to("test@example.com")->send(new SignUp);
+        $username = "test";
+        $userEmail = "test@example.com";
+        $MailObj = new SignUp($username);
+
+        Mail::to($userEmail)
+            ->send($MailObj);
     }
 }

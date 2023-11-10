@@ -16,9 +16,8 @@ class SignUp extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct(public string $username)
     {
-        //
     }
 
     /**
@@ -27,7 +26,8 @@ class SignUp extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Sign Up',
+            from: 'admin@example.com',
+            subject: 'Welcome',
         );
     }
 
