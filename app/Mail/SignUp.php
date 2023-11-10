@@ -13,6 +13,8 @@ class SignUp extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public string $url = "https://example.com";
+
     /**
      * Create a new message instance.
      */
@@ -37,7 +39,11 @@ class SignUp extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail.signup-mail',
+            // html: 'mail.signup-mail',
+            markdown: 'mail.signup-mail',
+            with: [
+                'url' => $this->url,
+            ],
         );
     }
 
