@@ -7,7 +7,7 @@
 
     <title>App Name</title>
 
-    @vite(['resources/css/app.css', 'resources/css/app.scss', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/css/app.scss', 'resources/js/app.ts'])
 </head>
 
 <body>
