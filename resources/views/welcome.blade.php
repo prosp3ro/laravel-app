@@ -7,10 +7,15 @@
 
     <title>App Name</title>
 
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
-    <x-star-rating />
+    {{-- <x-star-rating /> --}}
+
+    <h1 class="text-blue-400">
+        Hello world!
+    </h1>
 </body>
 
 </html>
